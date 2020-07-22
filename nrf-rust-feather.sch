@@ -105,17 +105,6 @@ F 3 "" H 2250 5150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C_Small C106
-U 1 1 5F058379
-P 2100 1400
-F 0 "C106" H 2008 1354 50  0000 R CNN
-F 1 "DNP" H 2008 1445 50  0000 R CNN
-F 2 "passive:C_0402" H 2100 1400 50  0001 C CNN
-F 3 "~" H 2100 1400 50  0001 C CNN
-	1    2100 1400
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C_Small C108
 U 1 1 5F05D205
 P 2450 1400
@@ -479,17 +468,6 @@ F 3 "" H 1750 1300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0107
-U 1 1 5F06114B
-P 2100 1300
-F 0 "#PWR0107" H 2100 1050 50  0001 C CNN
-F 1 "GND" V 2105 1172 50  0001 R CNN
-F 2 "" H 2100 1300 50  0001 C CNN
-F 3 "" H 2100 1300 50  0001 C CNN
-	1    2100 1300
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR0110
 U 1 1 5F061466
 P 2450 1300
@@ -542,12 +520,6 @@ Wire Wire Line
 	2450 1800 2450 1500
 Wire Wire Line
 	3100 1800 3100 2350
-Wire Wire Line
-	3000 1900 2100 1900
-Wire Wire Line
-	2100 1900 2100 1500
-Wire Wire Line
-	3000 1900 3000 2350
 Wire Wire Line
 	2900 2000 1750 2000
 Wire Wire Line
@@ -1694,28 +1666,22 @@ Wire Wire Line
 	4250 9300 4400 9300
 Wire Wire Line
 	3150 9100 2950 9100
-Text GLabel 5150 6850 2    50   Input ~ 0
-IMU_SDO
-Text GLabel 5150 7250 2    50   Input ~ 0
-IMU_INT1
 Text GLabel 5150 7150 2    50   Input ~ 0
+IMU_SDO
+Text GLabel 5150 6850 2    50   Input ~ 0
+IMU_INT1
+Text GLabel 5150 5450 2    50   Input ~ 0
 IMU_CS
-Text GLabel 5150 7050 2    50   Input ~ 0
+Text GLabel 5150 2850 2    50   Input ~ 0
 IMU_CLK
-Text GLabel 5150 6950 2    50   Input ~ 0
-IMU_SDI
 Text GLabel 5150 7350 2    50   Input ~ 0
+IMU_SDI
+Text GLabel 5150 5650 2    50   Input ~ 0
 IMU_INT2
 Wire Wire Line
 	5000 6850 5150 6850
 Wire Wire Line
-	5000 6950 5150 6950
-Wire Wire Line
-	5000 7050 5150 7050
-Wire Wire Line
 	5000 7150 5150 7150
-Wire Wire Line
-	5000 7250 5150 7250
 Wire Wire Line
 	5000 7350 5150 7350
 $Comp
@@ -1827,9 +1793,9 @@ F 3 "" H 8800 8150 50  0001 C CNN
 	1    8800 8150
 	1    0    0    -1  
 $EndComp
-Text GLabel 5150 6050 2    50   Input ~ 0
-QWIIC_SDA
 Text GLabel 5150 5950 2    50   Input ~ 0
+QWIIC_SDA
+Text GLabel 5150 6050 2    50   Input ~ 0
 QWIIC_SCL
 Wire Wire Line
 	5000 5950 5150 5950
@@ -2066,100 +2032,33 @@ Text GLabel 8050 7000 0    50   Input ~ 0
 LED2
 Text GLabel 8050 7300 0    50   Input ~ 0
 LED3
-Text GLabel 5150 2850 2    50   Input ~ 0
-BTN1
-Text GLabel 5150 2950 2    50   Input ~ 0
+Text GLabel 5150 5150 2    50   Input ~ 0
 BTN2
+Text GLabel 5150 2750 2    50   Input ~ 0
+BTN1
 Text GLabel 5150 3050 2    50   Input ~ 0
 LED1
-Text GLabel 5150 3150 2    50   Input ~ 0
-LED2
 Text GLabel 5150 3250 2    50   Input ~ 0
+LED2
+Text GLabel 5150 3450 2    50   Input ~ 0
 LED3
 Wire Wire Line
 	5000 2850 5150 2850
 Wire Wire Line
-	5000 2950 5150 2950
-Wire Wire Line
 	5000 3050 5150 3050
 Wire Wire Line
-	5000 3150 5150 3150
+	5000 3450 5150 3450
 Wire Wire Line
 	5000 3250 5150 3250
-$Comp
-L Device:Crystal_Small Y103
-U 1 1 5F673104
-P 5250 2400
-F 0 "Y103" V 5204 2488 50  0000 L CNN
-F 1 "32kHz" V 5295 2488 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm" H 5250 2400 50  0001 C CNN
-F 3 "~" H 5250 2400 50  0001 C CNN
-F 4 "FC-135 32.7680KA-AC0" H 5250 2400 50  0001 C CNN "MPN"
-	1    5250 2400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C130
-U 1 1 5F678F43
-P 5700 2200
-F 0 "C130" V 5471 2200 50  0000 C CNN
-F 1 "18p" V 5562 2200 50  0000 C CNN
-F 2 "passive:C_0402" H 5700 2200 50  0001 C CNN
-F 3 "~" H 5700 2200 50  0001 C CNN
-	1    5700 2200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C131
-U 1 1 5F678F49
-P 5700 2600
-F 0 "C131" V 5471 2600 50  0000 C CNN
-F 1 "18p" V 5562 2600 50  0000 C CNN
-F 2 "passive:C_0402" H 5700 2600 50  0001 C CNN
-F 3 "~" H 5700 2600 50  0001 C CNN
-	1    5700 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0172
-U 1 1 5F678F4F
-P 5800 2600
-F 0 "#PWR0172" H 5800 2350 50  0001 C CNN
-F 1 "GND" V 5805 2472 50  0001 R CNN
-F 2 "" H 5800 2600 50  0001 C CNN
-F 3 "" H 5800 2600 50  0001 C CNN
-	1    5800 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0173
-U 1 1 5F678F55
-P 5800 2200
-F 0 "#PWR0173" H 5800 1950 50  0001 C CNN
-F 1 "GND" V 5805 2072 50  0001 R CNN
-F 2 "" H 5800 2200 50  0001 C CNN
-F 3 "" H 5800 2200 50  0001 C CNN
-	1    5800 2200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
-	5600 2200 5250 2200
+	3000 2300 3000 2350
+NoConn ~ 3000 2350
 Wire Wire Line
-	5250 2200 5250 2300
+	5150 5650 5000 5650
 Wire Wire Line
-	5600 2600 5250 2600
+	5000 5450 5150 5450
 Wire Wire Line
-	5250 2600 5250 2500
+	5150 5150 5000 5150
 Wire Wire Line
-	5250 2600 5250 2750
-Wire Wire Line
-	5250 2750 5000 2750
-Connection ~ 5250 2600
-Wire Wire Line
-	5250 2200 5100 2200
-Wire Wire Line
-	5100 2200 5100 2650
-Wire Wire Line
-	5100 2650 5000 2650
-Connection ~ 5250 2200
+	5000 2750 5150 2750
 $EndSCHEMATC
